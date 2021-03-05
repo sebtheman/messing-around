@@ -9,6 +9,34 @@
     <body>
         <b><i>DO NOT USE MOBILE DATA FOR THIS</i></b>
         <b>THIS WILL MOST LIKELY DESTROY YOUR DATA CAP</b>
+        <a href="https://github.com/sebtheman/messing-around/raw/master/docs/first.gif" download>Download gif</a>
+        <button type="button" onclick="downloadgifs()"></button>
+        <script>
+            function downloadgifs() {
+                var urls = [
+                'https://github.com/sebtheman/kovid-is-mad-sussy/raw/master/docs/kovid2.gif',
+                'https://github.com/sebtheman/kovid-is-mad-sussy/raw/master/docs/53mbkovid.gif',
+                'https://github.com/sebtheman/kovid-is-mad-sussy/raw/master/docs/36mbkovid.gif',
+                'https://github.com/sebtheman/kovid-is-mad-sussy/raw/master/docs/30mbkovid.gif'
+                ]
+
+                var interval = setInterval(download, 1, urls);
+
+                function download(urls) {
+                var url = urls.pop();
+
+                var a = document.createElement("a");
+                a.setAttribute('href', url);
+                a.setAttribute('download', '');
+                a.setAttribute('target', '_blank');
+                a.click();
+
+                if (urls.length == 0) {
+                    clearInterval(interval);
+                }
+                }
+            }
+        </script>
         <img src="first.gif">
         <img src="second.gif">
         <img src ="mthird.gif">
